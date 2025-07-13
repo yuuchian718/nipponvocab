@@ -18,15 +18,30 @@
   }
 
   .card {
-    background-color: rgba(255, 248, 220, 0.92); /* 淡黃色 */
-    width: 90%;
-    max-width: 380px;
-    padding: 40px 20px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    margin: 70vh auto 0 auto; /* 🟡 讓卡片往下偏移，但不拉長 */
+  background-color: rgba(255, 248, 220, 0.92);
+  width: 95%;
+  max-width: 720px; /* 更大內容框 */
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin: 20vh auto 0 auto; /* 中下偏移 */
+}
+
+/* 手機版：背景完整呈現人物 */
+@media screen and (max-width: 480px) {
+  body {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center 20px;
   }
+
+  .card {
+    max-width: 95%;
+    margin: 15vh auto 0 auto;
+  }
+}
+
 
   h2 {
     font-size: 20px;
