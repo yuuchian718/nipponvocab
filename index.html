@@ -6,7 +6,7 @@
  
 
 <style>
-  html, body {
+    html, body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -15,10 +15,6 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
   }
 
   .card {
@@ -29,8 +25,7 @@
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    margin-top: 100px;
-
+    margin: 20vh auto 0 auto; /* 電腦版中下居中 */
     max-height: 85vh;
     overflow-y: auto;
     scrollbar-width: none;
@@ -40,6 +35,7 @@
     display: none;
   }
 
+  /* ✅ 手機畫面 */
   @media screen and (max-width: 480px) {
     body {
       background-size: contain;
@@ -51,7 +47,7 @@
       width: 95%;
       max-width: 880px;
       padding: 60px 40px;
-      margin: 85vh auto 0 auto;
+      margin: 65vh auto 0 auto; /* ✅ 更偏下 */
       max-height: 85vh;
       overflow-y: auto;
     }
@@ -101,6 +97,8 @@
     max-height: 100px;
     margin-bottom: 10px;
   }
+
+
 </style>
 
 
