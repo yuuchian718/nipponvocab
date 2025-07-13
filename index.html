@@ -7,33 +7,67 @@
 
 <style>
   html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: "Helvetica Neue", sans-serif;
-  background-image: url("ChatGPT Image 2025年7月13日 14_52_11.png");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Helvetica Neue", sans-serif;
+    background-image: url("ChatGPT Image 2025年7月13日 14_52_11.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-.card {
-  background-color: rgba(255, 248, 220, 0.92);
-  width: 95%;
-  max-width: 720px;
-  padding: 40px 30px;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  .card {
+    background-color: rgba(255, 248, 220, 0.92);
+    width: 95%;
+    max-width: 800px;
+    padding: 50px 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 
-  transform: translateY(60px); /* 下偏一點點 */
-}
+    transform: translateY(60px); /* 稍微往下偏移 */
+    max-height: 75vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
 
+  .card::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* ✅ 手機版調整 */
+  @media screen and (max-width: 480px) {
+    body {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center top;
+    }
+
+    .card {
+      background-color: rgba(255, 248, 220, 0.92);
+      width: 95%;
+      max-width: 800px;
+      padding: 50px 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      margin: 70vh auto 0 auto;
+
+      max-height: 75vh;
+      overflow-y: auto;
+      scrollbar-width: none;
+    }
+
+    .card::-webkit-scrollbar {
+      display: none;
+    }
+  }
 
   h2 {
     font-size: 20px;
@@ -80,6 +114,7 @@
     margin-bottom: 8px;
   }
 </style>
+
 
 </head>
 <body>
