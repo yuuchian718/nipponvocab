@@ -17,21 +17,20 @@
     background-attachment: fixed;
 
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .card {
     background-color: rgba(255, 248, 220, 0.92);
     width: 95%;
-    max-width: 920px;
-    padding: 80px 60px;
+    max-width: 880px;
+    padding: 60px 40px;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-top: 100px;
 
-    transform: translateY(60px);
     max-height: 85vh;
     overflow-y: auto;
     scrollbar-width: none;
@@ -49,45 +48,60 @@
     }
 
     .card {
-      background-color: rgba(255, 248, 220, 0.92);
       width: 95%;
-      max-width: 920px;
-      padding: 80px 60px;
-      border-radius: 20px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      margin: 70vh auto 0 auto;
-
+      max-width: 880px;
+      padding: 60px 40px;
+      margin-top: 70vh;
       max-height: 85vh;
       overflow-y: auto;
-      scrollbar-width: none;
-    }
-
-    .card::-webkit-scrollbar {
-      display: none;
     }
   }
 
   h2 {
-    font-size: 40px;   /* ✅ 標題超大 */
-    margin: 24px 0 16px;
+    font-size: 34px;
+    margin: 20px 0 10px;
   }
 
   p {
-    font-size: 32px;   /* ✅ 正文放大 */
-    margin: 16px 0;
+    font-size: 28px;
+    margin: 14px 0;
   }
 
   .btn {
     background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 14px 26px;
-    margin: 10px 8px;
-    border-radius: 8px;
+    padding: 12px 20px;
+    margin: 10px 6px;
+    border-radius: 6px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 20px;
+  }
 
+  .btn:hover {
+    background-color: #45a049;
+  }
+
+  .small-btn {
+    background-color: #eee;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px 14px;
+    margin: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  .small-btn:hover {
+    background-color: #ddd;
+  }
+
+  img {
+    max-height: 100px;
+    margin-bottom: 10px;
+  }
+</style>
 
 
 </head>
