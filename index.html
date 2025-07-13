@@ -25,14 +25,14 @@
   .card {
     background-color: rgba(255, 248, 220, 0.92);
     width: 95%;
-    max-width: 800px;
-    padding: 50px 40px;
+    max-width: 880px;           /* ✅ 放大寬度 */
+    padding: 60px 50px;         /* ✅ 增加內部空間 */
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 
-    transform: translateY(60px); /* 稍微往下偏移 */
-    max-height: 75vh;
+    transform: translateY(60px);
+    max-height: 80vh;
     overflow-y: auto;
     scrollbar-width: none;
   }
@@ -41,7 +41,6 @@
     display: none;
   }
 
-  /* ✅ 手機版調整 */
   @media screen and (max-width: 480px) {
     body {
       background-size: contain;
@@ -52,14 +51,14 @@
     .card {
       background-color: rgba(255, 248, 220, 0.92);
       width: 95%;
-      max-width: 800px;
-      padding: 50px 40px;
+      max-width: 880px;
+      padding: 60px 50px;
       border-radius: 20px;
       text-align: center;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
       margin: 70vh auto 0 auto;
 
-      max-height: 75vh;
+      max-height: 80vh;
       overflow-y: auto;
       scrollbar-width: none;
     }
@@ -70,24 +69,24 @@
   }
 
   h2 {
-    font-size: 20px;
-    margin: 12px 0 6px;
+    font-size: 26px;   /* ✅ 放大標題 */
+    margin: 16px 0 8px;
   }
 
   p {
-    font-size: 16px;
-    margin: 8px 0;
+    font-size: 20px;   /* ✅ 放大文字 */
+    margin: 10px 0;
   }
 
   .btn {
     background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 8px 16px;
-    margin: 6px 4px;
+    padding: 10px 18px;
+    margin: 8px 6px;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .btn:hover {
@@ -98,11 +97,11 @@
     background-color: #eee;
     color: #333;
     border: 1px solid #ccc;
-    padding: 5px 10px;
-    margin: 4px;
+    padding: 7px 12px;
+    margin: 6px;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .small-btn:hover {
@@ -110,8 +109,8 @@
   }
 
   img {
-    max-height: 80px;
-    margin-bottom: 8px;
+    max-height: 100px;
+    margin-bottom: 10px;
   }
 </style>
 
