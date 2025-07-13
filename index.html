@@ -18,36 +18,34 @@
   }
 
   .card {
-  background-color: rgba(255, 248, 220, 0.92);
-  width: 95%;
-  max-width: 720px; /* 更大內容框 */
-  padding: 40px 30px;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  margin: 20vh auto 0 auto; /* 中下偏移 */
-}
-
-/* 手機版：背景完整呈現人物 */
-@media screen and (max-width: 480px) {
-  body {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center 20px;
+    background-color: rgba(255, 248, 220, 0.92);
+    width: 95%;
+    max-width: 720px;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin: 20vh auto 0 auto; /* 電腦版：中偏下 */
   }
 
-  .card {
-  background-color: rgba(255, 248, 220, 0.92);
-  width: 95%;
-  max-width: 720px;
-  padding: 40px 30px;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  margin: 70vh auto 0 auto; /* ✅ 控制往下偏移 */
-}
-}
+  @media screen and (max-width: 480px) {
+    body {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center top;
+    }
 
+    .card {
+      background-color: rgba(255, 248, 220, 0.92);
+      width: 95%;
+      max-width: 720px;
+      padding: 40px 30px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      margin: 70vh auto 0 auto; /* ✅ 手機版往下移 */
+    }
+  }
 
   h2 {
     font-size: 20px;
@@ -93,15 +91,8 @@
     max-height: 80px;
     margin-bottom: 8px;
   }
-
-  @media screen and (max-width: 480px) {
-  body {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center top;
-  }
-    
 </style>
+
 </head>
 <body>
 
