@@ -3,83 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <title>日語單字學習卡</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Helvetica Neue", sans-serif;
-      background-image: url("ChatGPT Image 2025年7月13日 14_52_11.png");
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-    }
+ 
+
+ <style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Helvetica Neue", sans-serif;
+    background-image: url("ChatGPT Image 2025年7月13日 14_52_11.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: flex-start; /* 從上方開始對齊 */
+    justify-content: center;
+  }
 
   .card {
-  background-color: rgba(255, 248, 220, 0.92); /* 柔和淡黃色 */
-  width: 100%;            /* 設定寬度為畫面 100% */
-  max-width: 600px;      /* 最大寬度不超過 400px */
-  height: 40vh;          /* 高度設為螢幕的 40% */
-  margin: 10vh auto;     /* 上下留白 + 自動水平置中 */
-  padding: 40px 20px;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  overflow-y: auto;      /* 內容過多時可滾動 */
-}
+    background-color: rgba(255, 248, 220, 0.92); /* 柔和淡黃 */
+    width: 85%;
+    max-width: 360px;
+    height: 80vh;
+    margin-top: 100px; /* 這裡控制向下偏移程度 */
+    padding: 40px 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+  }
 
+  h2 {
+    font-size: 20px;
+    margin: 12px 0 6px;
+  }
 
+  p {
+    font-size: 16px;
+    margin: 8px 0;
+  }
 
+  .btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 6px 4px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+  }
 
-    h2 {
-      font-size: 30px;
-      margin: 12px 0 6px;
-    }
+  .btn:hover {
+    background-color: #45a049;
+  }
 
-    p {
-      font-size: 16px;
-      margin: 8px 0;
-    }
+  .small-btn {
+    background-color: #eee;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    margin: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+  }
 
-    .btn {
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      padding: 8px 16px;
-      margin: 6px 4px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 14px;
-    }
+  .small-btn:hover {
+    background-color: #ddd;
+  }
 
-    .btn:hover {
-      background-color: #45a049;
-    }
+  img {
+    max-height: 80px;
+    margin-bottom: 8px;
+  }
 
-    .small-btn {
-      background-color: #eee;
-      color: #333;
-      border: 1px solid #ccc;
-      padding: 5px 10px;
-      margin: 4px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 13px;
-    }
-
-    .small-btn:hover {
-      background-color: #ddd;
-    }
-
-    img {
-      max-height: 80px;
-      margin-bottom: 8px;
-    }
-
-    @media screen and (max-width: 480px) {
-      .card {
-        margin: 100px auto;
-        width: 90%;
-      }
+  @media screen and (max-width: 480px) {
+    .card {
+      width: 90%;
+      height: 80vh;
+      margin-top: 80px;
     }
   </style>
 </head>
