@@ -1,0 +1,92 @@
+
+
+<script>
+  var password = prompt("请输入访问密码：");
+  if (password !== "123456") {
+    document.body.innerHTML = "<h2 style='text-align:center;color:red;'>密码错误，无法访问此页面。</h2>";
+  }
+</script>
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>日語圖文單詞卡</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; background: #f8f8f8; }
+    .card { background: #fff; padding: 20px; margin: 40px auto; width: 90%; max-width: 500px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    img { max-width: 100%; height: auto; border-radius: 8px; }
+    .nav { margin-top: 20px; }
+    .nav button { padding: 10px 20px; margin: 5px; border: none; background: #4CAF50; color: white; font-size: 16px; border-radius: 6px; cursor: pointer; }
+    .nav button:hover { background: #45a049; }
+    audio { margin-top: 10px; }
+    .info { margin: 15px 0; }
+    .info strong { display: inline-block; width: 80px; text-align: right; margin-right: 10px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img id="image" src="" alt="Image" />
+    <div class="info"><strong>詞條：</strong><span id="word"></span></div>
+    <div class="info"><strong>詞性：</strong><span id="pos"></span></div>
+    <div class="info"><strong>中文：</strong><span id="trans"></span></div>
+    <div class="info"><strong>例文：</strong><span id="sentence"></span></div>
+    <div class="info"><strong>翻譯：</strong><span id="sentence_zh"></span></div>
+    <div class="info">
+      <button onclick="playAudio('word')">播放詞條音</button>
+      <button onclick="playAudio('sentence')">播放例句音</button><br/>
+      <audio id="audio" src=""></audio>
+    </div>
+    <div class="nav">
+      <button onclick="prevCard()">上一張</button>
+      <button onclick="nextCard()">下一張</button>
+      <button onclick="shuffleCards()">隨機順序</button>
+    </div>
+  </div>
+
+  <script>
+    const cards = [{"word": "猫", "pos": "名词", "translation": "猫", "sentence": "猫（ねこ）は椅子（いす）の上（うえ）にいます。", "sentence_zh": "猫在椅子上。"}, {"word": "散歩する", "pos": "动词", "translation": "散步", "sentence": "毎日（まいにち）公園（こうえん）で散歩（さんぽ）します。", "sentence_zh": "我每天在公园散步。"}, {"word": "綺麗", "pos": "形容动词", "translation": "漂亮", "sentence": "この花（はな）はとても綺麗（きれい）です。", "sentence_zh": "这朵花非常漂亮。"}, {"word": "山", "pos": "名词", "translation": "山", "sentence": "昨日（きのう）、山（やま）に登（のぼ）りました。", "sentence_zh": "昨天我爬了山。"}, {"word": "魚", "pos": "名词", "translation": "鱼", "sentence": "魚（さかな）が水（みず）の中（なか）で泳（およ）いでいます。", "sentence_zh": "鱼在水中游泳。"}];
+    let index = 0;
+
+    function showCard(i) {
+      const card = cards[i];
+      document.getElementById("word").innerText = card.word;
+      document.getElementById("pos").innerText = card.pos;
+      document.getElementById("trans").innerText = card.translation;
+      document.getElementById("sentence").innerText = card.sentence;
+      document.getElementById("sentence_zh").innerText = card.sentence_zh;
+      document.getElementById("image").src = "https://via.placeholder.com/400x250.png?text=" + encodeURIComponent(card.word);
+    }
+
+    function nextCard() {
+      index = (index + 1) % cards.length;
+      showCard(index);
+    }
+
+    function prevCard() {
+      index = (index - 1 + cards.length) % cards.length;
+      showCard(index);
+    }
+
+    function shuffleCards() {
+      for (let i = cards.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [cards[i], cards[j]] = [cards[j], cards[i]];
+      }
+      index = 0;
+      showCard(index);
+    }
+
+    function playAudio(type) {
+      const card = cards[index];
+      const audio = document.getElementById("audio");
+      audio.src = "audio/" + card.word + "_" + type + ".mp3";
+      audio.play();
+    }
+
+    window.onload = () => {
+      showCard(index);
+    };
+  </script>
+</body>
+</html>
