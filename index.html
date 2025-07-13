@@ -5,7 +5,7 @@
   <title>日語單字學習卡</title>
  
 
- <style>
+<style>
   html, body {
     margin: 0;
     padding: 0;
@@ -15,22 +15,17 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    display: flex;
-    align-items: flex-start; /* 從上方開始對齊 */
-    justify-content: center;
   }
 
   .card {
-    background-color: rgba(255, 248, 220, 0.92); /* 柔和淡黃 */
-    width: 85%;
-    max-width: 360px;
-    height: 80vh;
-    margin-top: 100px; /* 這裡控制向下偏移程度 */
+    background-color: rgba(255, 248, 220, 0.92); /* 淡黃色 */
+    width: 90%;
+    max-width: 380px;
     padding: 40px 20px;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    overflow-y: auto;
+    margin: 20vh auto 0 auto; /* 🟡 讓卡片往下偏移，但不拉長 */
   }
 
   h2 {
@@ -80,11 +75,12 @@
 
   @media screen and (max-width: 480px) {
     .card {
-      width: 90%;
-      height: 80vh;
-      margin-top: 80px;
+      width: 95%;
+      max-width: 360px;
+      margin: 15vh auto 0 auto;
     }
-  </style>
+  }
+</style>
 </head>
 <body>
 
